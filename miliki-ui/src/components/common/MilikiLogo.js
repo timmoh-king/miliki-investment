@@ -7,7 +7,7 @@ const MilikiLogo = ({ logoStyle }) => {
         logoStyle ? logoStyle : ""
       }`}
     >
-      <p className="leading-6 text-center text-miliki-blue text-[20px] font-inter font-[900] not-italic">
+      <p className="leading-normal text-center text-miliki-blue text-2xl font-inter font-[900] not-italic">
         Miliki <span className="text-miliki-sky-blue">investment</span>
       </p>
     </div>
