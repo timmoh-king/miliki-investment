@@ -29,7 +29,7 @@ const MilikiButton = ({
     <>
       {isButtonForm ? (
         <button
-          className={`absolute h-[36px] w-[509px] rounded-[5px] bg-miliki-blue items-center leading-none text-white font-inter font-[900] not-italic transition-colors duration-400 ease-in-out hover:border-2 hover:bg-white hover:text-miliki-blue outline-offset-2 outline-miliki-dark-blue ${buttonStyle ? buttonStyle : ""}`}
+          className={`absolute h-[36px] lg:w-[509px] md:w-[254px] sm:w-[180px] rounded-[5px] bg-miliki-blue gap-4 items-center leading-none text-white font-inter font-[900] not-italic transition-colors duration-400 ease-in-out hover:border-2 hover:bg-white hover:text-miliki-blue outline-offset-2 outline-miliki-dark-blue ${buttonStyle ? buttonStyle : ""}`}
           type={`${buttonType ? buttonType : ""}`}
           onClick={onClickButtonHandler}
         >
@@ -38,7 +38,7 @@ const MilikiButton = ({
         </button>
       ) : (
         <button
-          className={`absolute h-[36px] w-[130px] rounded-[5px] bg-miliki-blue items-center leading-none text-white font-inter font-[900] not-italic transition-colors duration-400 ease-in-out hover:border-2 hover:bg-white hover:text-miliki-blue outline-offset-2 outline-miliki-dark-blue ${buttonStyle ? buttonStyle : ""}`}
+          className={`absolute h-[36px] lg:w-[130px] sm:w-[64px] rounded-[5px] bg-miliki-blue items-center leading-none gap-4 text-white font-inter font-[900] not-italic transition-colors duration-400 ease-in-out hover:border-2 hover:bg-white hover:text-miliki-blue outline-offset-2 outline-miliki-dark-blue ${buttonStyle ? buttonStyle : ""}`}
           type={`${buttonType ? buttonType : ""}`}
           onClick={onClickButtonHandler}
         >
