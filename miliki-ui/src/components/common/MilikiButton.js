@@ -15,7 +15,7 @@ const MilikiButton = ({
       <>
         <Link
           to={to}
-          className={`${buttonStyle ? buttonStyle : ""}`}
+          className={`absolute h-[36px] rounded-[5px] bg-miliki-blue gap-4 items-center leading-none text-white font-inter font-[900] not-italic transition-colors duration-400 ease-in-out hover:border-2 hover:bg-white hover:text-miliki-blue outline-offset-2 outline-miliki-dark-blue ${buttonStyle ? buttonStyle : ""}`}
           type={`${buttonType ? buttonType : ""}`}
           onClick={onClickButtonHandler}
         >
