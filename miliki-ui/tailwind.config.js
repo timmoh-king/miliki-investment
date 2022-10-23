@@ -6,7 +6,7 @@ module.exports = {
       transparent: 'transparent',
       'black': '#000000',
       'white': '#FFFFFF',
-      'miliki-gray': {
+      'gray': {
         DEFAULT: '#E6E6F1',
         50: '#f9fafb',
         100: '#f3f4f6',
