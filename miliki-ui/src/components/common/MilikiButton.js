@@ -29,7 +29,7 @@ const MilikiButton = ({
     <>
       {isButtonForm ? (
         <button
-          className={`h-[36px] lg:w-[509px] md:w-[254px] sm:w-[180px] grid place-text-center rounded-[5px] bg-miliki-blue items-center leading-none text-white font-inter font-[900] not-italic transition-colors duration-400 ease-in-out hover:border-2 hover:bg-white hover:text-miliki-blue hover:ring-[1px] hover:ring-miliki-blue outline-offset-2 outline-miliki-dark-blue ${buttonStyle ? buttonStyle : ""}`}
+          className={`h-[36px] lg:w-[509px] md:w-[254px] sm:w-[180px] grid place-text-center rounded-[5px] lg:text-[16px] md:text-[14px] sm:text-[12px] bg-miliki-blue items-center leading-none text-white font-inter font-[900] not-italic transition-colors duration-400 ease-in-out hover:border-2 hover:bg-white hover:text-miliki-blue hover:ring-[1px] hover:ring-miliki-blue outline-offset-2 outline-miliki-dark-blue ${buttonStyle ? buttonStyle : ""}`}
           type={`${buttonType ? buttonType : ""}`}
           onClick={onClickButtonHandler}
         >
@@ -38,7 +38,7 @@ const MilikiButton = ({
         </button>
       ) : (
         <button
-          className={`h-[36px] lg:w-[130px] sm:w-[64px] rounded-[5px] grid place-text-center bg-miliki-blue items-center leading-none text-white font-inter font-[900] not-italic transition-colors duration-400 ease-in-out hover:border-2 hover:bg-white hover:text-miliki-blue hover:ring-[1px] hover:ring-miliki-blue outline-offset-2 outline-miliki-dark-blue ${buttonStyle ? buttonStyle : ""}`}
+          className={`h-[36px] lg:w-[130px] sm:w-[64px] rounded-[5px] lg:text-[14px] md:text-[12px] sm:text-[10px] grid place-text-center bg-miliki-blue items-center leading-none text-white font-inter font-[900] not-italic transition-colors duration-400 ease-in-out hover:border-2 hover:bg-white hover:text-miliki-blue hover:ring-[1px] hover:ring-miliki-blue outline-offset-2 outline-miliki-dark-blue ${buttonStyle ? buttonStyle : ""}`}
           type={`${buttonType ? buttonType : ""}`}
           onClick={onClickButtonHandler}
         >
