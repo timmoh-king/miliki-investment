@@ -33,7 +33,7 @@ const MilikiNavbar = (to, isNavHome, imgSrc) => {
                 <li>
                   <NavLink
                     to={to}
-                    className="block py-2 pr-4 pl-3 leading normal lg:text-[18px] md:text-[16px] sm:text-[14px] text-miliki-black font-inter font-[700] not-italic hover:text-[19px] hover:text-miliki-blue hover:bg-miliki-gray md:p-0"
+                    className="block py-2 pr-4 pl-3 leading normal lg:text-[18px] md:text-[16px] sm:text-[14px] text-miliki-black font-inter font-[700] not-italic hover:text-[19px] hover:text-miliki-blue md:p-0"
                     aria-current="page"
                   >
                     Home
@@ -42,7 +42,7 @@ const MilikiNavbar = (to, isNavHome, imgSrc) => {
                 <li>
                   <NavLink
                     to={to}
-                    className="block py-2 pr-4 pl-3 leading normal lg:text-[18px] md:text-[16px] sm:text-[14px] text-miliki-black font-inter font-[700] not-italic hover:text-[19px] hover:text-miliki-blue hover:bg-miliki-gray md:p-0"
+                    className="block py-2 pr-4 pl-3 leading normal lg:text-[18px] md:text-[16px] sm:text-[14px] text-miliki-black font-inter font-[700] not-italic hover:text-[19px] hover:text-miliki-blue md:p-0"
                   >
                     About us
                   </NavLink>
@@ -50,7 +50,7 @@ const MilikiNavbar = (to, isNavHome, imgSrc) => {
                 <li>
                   <NavLink
                     to={to}
-                    className="block py-2 pr-4 pl-3 leading normal lg:text-[18px] md:text-[16px] sm:text-[14px] text-miliki-black font-inter font-[700] not-italic hover:text-[19px] hover:text-miliki-blue hover:bg-miliki-gray md:p-0"
+                    className="block py-2 pr-4 pl-3 leading normal lg:text-[18px] md:text-[16px] sm:text-[14px] text-miliki-black font-inter font-[700] not-italic hover:text-[19px] hover:text-miliki-blue md:p-0"
                   >
                     Blog
                   </NavLink>
@@ -58,7 +58,7 @@ const MilikiNavbar = (to, isNavHome, imgSrc) => {
                 <li>
                   <NavLink
                     to={to}
-                    className="block py-2 pr-4 pl-3 leading normal lg:text-[18px] md:text-[16px] sm:text-[14px] text-miliki-black font-inter font-[700] not-italic hover:text-[19px] hover:text-miliki-blue hover:bg-miliki-gray md:p-0"
+                    className="block py-2 pr-4 pl-3 leading normal lg:text-[18px] md:text-[16px] sm:text-[14px] text-miliki-black font-inter font-[700] not-italic hover:text-[19px] hover:text-miliki-blue md:p-0"
                   >
                     Contact us
                   </NavLink>
