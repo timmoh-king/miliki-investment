@@ -7,7 +7,7 @@ const MilikiSignup = () => {
   return (
     <div>
       <MilikiNavbar />
-      <div className="items-center">
+      <div className="items-center mt-1">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <div className="w-[640px] h-[768px] bg-gradient-to-b from-miliki-gray to-white">
             <p className="leading-normal mt-[256px] text-center text-miliki-blue lg:text-2xl md:text-xl sm:text-md font-inter font-[900] not-italic">
