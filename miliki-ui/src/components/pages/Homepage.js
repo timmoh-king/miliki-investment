@@ -11,7 +11,6 @@ import {
   IoIosRocket,
 } from "react-icons/io";
 
-/* Miliki Homepage components */
 export const IconComponent = ({ iconComponentStyle, icon }) => {
   return (
     <div
