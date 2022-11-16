@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MilikiNavbar from "../common/MilikiNavbar";
 import HomeCard from "../common/HomeCard";
 import MilikiButton from "../common/MilikiButton";
@@ -112,11 +113,13 @@ export const ExploreSection = () => {
           </p>
           <div className="flex flex-row gap-2 py-4">
             <MilikiButton
+              to="/signup"
               isButtonForm={false}
               buttonText="Register"
               buttonStyle="hover:ring-[1px] hover:ring-miliki-blue"
             />
             <MilikiButton
+              to="/"
               isButtonForm={false}
               buttonText="Explore"
               buttonStyle="bg-white mx-3 text-black ring-miliki-blue ring-[1px] h-[34px] hover:bg-miliki-blue hover:text-white hover:ring-[0px]"
@@ -153,6 +156,7 @@ export const EventsFeatured = () => {
           </p>
           <div className="flex flex-row gap-2 py-4">
             <MilikiButton
+              to="/"
               isButtonForm={false}
               buttonText="Explore"
               buttonStyle="bg-white mx-3 text-black ring-miliki-blue ring-[1px] h-[34px] hover:bg-miliki-blue hover:text-white hover:ring-[0px]"
@@ -170,7 +174,7 @@ export const EventsFeatured = () => {
     </div>
   );
 };
-export const OfferSection = () => {
+export const OfferSection = ({to}) => {
   return (
     <div className="bg-miliki-gray items-center">
       <div className="container grid grid-cols-2 mt-[50px] mb-[50px] mx-auto items-flex flex-row">
@@ -194,8 +198,8 @@ export const OfferSection = () => {
             1500s, when an unknown printer took a galley.
           </p>
           <div className="flex flex-row py-4">
-            <a
-              href="#"
+            <Link
+              to={to}
               className="block p-4 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-miliki-gray dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
             >
               <IconComponent
@@ -207,9 +211,9 @@ export const OfferSection = () => {
               <p className="font-normal text-start text-miliki-black">
                 is simply dummy text of the printing and typesetting industry.
               </p>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to={to}
               className="block p-4 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-miliki-gray dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
             >
               <IconComponent
@@ -221,11 +225,11 @@ export const OfferSection = () => {
               <p className="font-normal text-start text-miliki-black">
                 is simply dummy text of the printing and typesetting industry.
               </p>
-            </a>
+            </Link>
           </div>
           <div className="flex flex-row py-4">
-            <a
-              href="#"
+            <Link
+              to={to}
               className="block p-4 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-miliki-gray dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
             >
               <IconComponent
@@ -237,9 +241,9 @@ export const OfferSection = () => {
               <p className="font-normal text-start text-miliki-black">
                 is simply dummy text of the printing and typesetting industry.
               </p>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to={to}
               className="block p-4 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-miliki-gray dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
             >
               <IconComponent
@@ -251,7 +255,7 @@ export const OfferSection = () => {
               <p className="font-normal text-start text-miliki-black">
                 is simply dummy text of the printing and typesetting industry.
               </p>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -276,7 +280,7 @@ export const FeaturedInvestors = () => {
             make a type specimen book. It has survived not only five
           </p>
           <div className="mt-4">
-            <MilikiButton buttonText="Invest" />
+            <MilikiButton to="/signin" isButtonForm={false} buttonText="Invest" />
           </div>
         </div>
       </div>
@@ -298,7 +302,7 @@ export const InvestorCards = () => {
         />
         <HomeCard
           isInvestor={true}
-          imgSrc="https://images.unsplash.com/photo-1637684666587-91e51b10a555?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=462&q=80"
+          imgSrc="https://images.unsplash.com/photo-1668531282396-96bea4cacab5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
           alt="John Doe"
           investorName="John Doe"
           investorNationality="Sudan"
@@ -360,7 +364,7 @@ export const InvestorTestimonials = () => {
 const Homepage = () => {
   return (
     <div>
-      <MilikiNavbar />
+      <MilikiNavbar isNavHome={true} />
       <HeroSection />
       <ExploreSection />
       <OfferSection />

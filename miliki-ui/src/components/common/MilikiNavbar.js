@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserAuthContext } from "../../context/UserAuthContextProvider";
 import MilikiLogo from "./MilikiLogo";
 import MilikiButton from "./MilikiButton";
 import { PropTypes } from "prop-types";
@@ -11,6 +12,8 @@ import {
 } from "react-icons/io";
 
 const MilikiNavbar = (to, isNavHome, imgSrc) => {
+  const { currentUser, logout } = useContext(UserAuthContext);
+
   return (
     <div>
       <nav className="bg-white w-full max-h-[60px] shadow shadow-miliki-gray-900 lg:px-1 md:px-2 sm:px-4 py-2.5">
@@ -27,7 +30,53 @@ const MilikiNavbar = (to, isNavHome, imgSrc) => {
           >
             <IoIosMenu className="fill-miliki-blue h-[22px] w-[24px]" />
           </button>
-          {isNavHome ? (
+
+          {currentUser ? (
+            <div className="hidden justify-between items-center md:flex md:w-auto md:order-1">
+              <ul className="flex flex-col p-4 mt-3 w-full rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                <li>
+                  <NavLink
+                    to={to}
+                    className="block py-2 pr-4 pl-5 leading md:p-0"
+                    aria-current="page"
+                  >
+                    <IoIosHome className="fill-miliki-blue h-[22px] w-[24px]" />
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={to}
+                    className="block py-2 pr-4 pl-5 leading md:p-0"
+                  >
+                    <IoIosWallet className="fill-miliki-blue h-[22px] w-[24px]" />
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={to}
+                    className="block py-2 pr-4 pl-5 leading md:p-0"
+                  >
+                    <IoIosNotifications className="fill-miliki-blue h-[22px] w-[24px]" />
+                  </NavLink>
+                </li>
+              </ul>
+              <div className="flex flex-row ml-8 mb-2">
+                <div className="h-[40px] w-[40px] rounded-full bg-white mx-10">
+                  <img
+                    src="rui-silvestre-jCeVRUQslTs-unsplash.jpg"
+                    alt="avatar"
+                    className="h-[100%] w-[100%] object-cover items-center rounded-full border border-miliki-sky-blue"
+                  />
+                </div>
+                <MilikiButton
+                  to="/"
+                  onClickButtonHandler={logout}
+                  isButtonForm={false}
+                  buttonText="Log out"
+                />
+              </div>
+            </div>
+          ) : (
             <div className="hidden justify-between items-center md:flex md:w-auto md:order-1">
               <ul className="flex flex-col p-4 mt-4 w-full rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                 <li>
@@ -66,58 +115,16 @@ const MilikiNavbar = (to, isNavHome, imgSrc) => {
               </ul>
               <div className="flex flex-row ml-8 mb-2">
                 <MilikiButton
+                  to="/signin"
                   isButtonForm={false}
                   buttonText="Sign in"
                   buttonStyle="bg-white mx-3 text-black ring-miliki-blue ring-[1px] h-[34px] hover:bg-miliki-blue hover:text-white hover:ring-[0px]"
                 />
                 <MilikiButton
+                  to="/signup"
                   isButtonForm={false}
                   buttonText="Register"
                   buttonStyle="hover:ring-[1px] hover:ring-miliki-blue"
-                />
-              </div>
-
-            </div>
-          ) : (
-            <div className="hidden justify-between items-center md:flex md:w-auto md:order-1">
-              <ul className="flex flex-col p-4 mt-3 w-full rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-                <li>
-                  <NavLink
-                    to={to}
-                    className="block py-2 pr-4 pl-5 leading md:p-0"
-                    aria-current="page"
-                  >
-                    <IoIosHome className="fill-miliki-blue h-[22px] w-[24px]" />
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to={to}
-                    className="block py-2 pr-4 pl-5 leading md:p-0"
-                  >
-                    <IoIosWallet className="fill-miliki-blue h-[22px] w-[24px]" />
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to={to}
-                    className="block py-2 pr-4 pl-5 leading md:p-0"
-                  >
-                    <IoIosNotifications className="fill-miliki-blue h-[22px] w-[24px]" />
-                  </NavLink>
-                </li>
-              </ul>
-              <div className="flex flex-row ml-8 mb-2">
-                <div className="h-[40px] w-[40px] rounded-full bg-white mx-10">
-                  <img
-                    src={imgSrc}
-                    alt="avatar"
-                    className="h-[100%] w-[100%] items-center rounded-full border border-miliki-sky-blue"
-                  />
-                </div>
-                <MilikiButton
-                  isButtonForm={false}
-                  buttonText="Log out"
                 />
               </div>
             </div>
