@@ -7,7 +7,7 @@ import MilikiCard from "../common/MilikiCard";
 const MilikiDashboard = () => {
   return (
     <div>
-      <MilikiNavbar />
+      <MilikiNavbar isNavHome={false} />
       <div className="container flex">
         <div className="py-1 px-2">
           <MilikiSidenav isSidenavLeft={true} />
