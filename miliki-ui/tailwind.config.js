@@ -20,6 +20,7 @@ module.exports = {
       'miliki-black': '#252525',
       'miliki-blue': '#042873',
       'miliki-green': '#38B64A',
+      'miliki-red': '#FF0000'
     },
     extend: {
       boxShadow: {
