@@ -10,6 +10,7 @@ const { isEmpty } = require("lodash");
 module.exports = {
   signInHandler: async (req, res) => {
     const { error } = signInValidation(req.body);
+
     if (error)
       return res
         .status(400)
@@ -31,6 +32,8 @@ module.exports = {
         .status(400)
         .json({ errored: true, error: "Incorrect Password" });
 
+        console.log(validPassword)
+
     const response = pick(results, ["userid", "email"]);
 
     jwt.sign(
@@ -49,11 +52,17 @@ module.exports = {
     );
   },
   signUpHandler: async (req, res) => {
-    const { firstname, lastname, email, contact, password } = req.body;
+    const { firstname, lastname, email, contact, password } = req.body
 
-    // const { error } = addAUserValidation(req.body);
+    const { error } = addAUserValidation(req.body);
+
+    if (error)
+      return res
+        .status(400)
+        .send({ errored: true, error: error.details[0].message });
 
     const results = await db.search("miliki.user", { email });
+    console.log(results)
 
     if (!isEmpty(results))
       return res
@@ -66,7 +75,9 @@ module.exports = {
     req.body["userid"] = uuid();
     req.body["password"] = hash;
 
-    const response = await db.create("miliki.user", req.body, [
+    const {confirmPassword, ...other} = req.body;
+
+    const response = await db.create("miliki.user", other, [
       "userid",
       "email",
     ]);

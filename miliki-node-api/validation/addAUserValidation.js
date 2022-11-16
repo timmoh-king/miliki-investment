@@ -1,12 +1,13 @@
-const { object, string, number } = require("joi");
+const Joi = require("joi");
 
 function addAUserValidation(user) {
-  const schema = object({
-    firstname: string().required(),
-    lastname: string().required(),
-    email: string().email().required(),
-    password: string().min(8).required(),
-    contact: number().required()
+  const schema = Joi.object({
+    firstname: Joi.string().required(),
+    lastname: Joi.string().required(),
+    email: Joi.string().email().required(),
+    password: Joi.string().min(8).required(),
+    confirmPassword: Joi.string().min(8).required(),
+    contact: Joi.number().required()
   });
 
   return schema.validate(user);

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { SiGooglemessages } from "react-icons/si";
 
 import {
@@ -11,6 +12,7 @@ import {
 } from "react-icons/io";
 
 const HomeCard = ({
+  to,
   isInvestor,
   imgSrc,
   imgSrc2,
@@ -59,22 +61,30 @@ const HomeCard = ({
             </div>
           </div>
           <div className="flex flex-row place-content-center py-4 mr-5 w-full">
-            <IoLogoFacebook className="fill-miliki-blue m-1 h-[23px] w-[23px]" />
-            <IoLogoLinkedin className="fill-miliki-blue m-1 h-[23px] w-[23px]" />
-            <IoLogoGithub className="fill-miliki-blue m-1 h-[23px] w-[23px]" />
-            <IoLogoTwitter className="fill-miliki-blue m-1 h-[23px] w-[23px]" />
+            <Link to="/https://www.facebook.com/">
+              <IoLogoFacebook className="fill-miliki-blue m-1 h-[23px] w-[23px]" />
+            </Link>
+            <Link to="/https://www.instagram.com/">
+              <IoLogoLinkedin className="fill-miliki-blue m-1 h-[23px] w-[23px]" />
+            </Link>
+            <Link to="/https://www.linkedin.com/">
+              <IoLogoGithub className="fill-miliki-blue m-1 h-[23px] w-[23px]" />
+            </Link>
+            <Link to="/https://www.twitter.com/">
+              <IoLogoTwitter className="fill-miliki-blue m-1 h-[23px] w-[23px]" />
+            </Link>
           </div>
         </div>
       ) : (
         <div className="max-w-sm mx-2 py-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <div className="py-4 grid place-content-center w-full place-content-center">
+          <div className="mt-2 py-4 grid place-content-center w-full place-content-center">
             <img
-              className="rounded-full img-fluid h-[105px] w-[105px]"
+              className="rounded-full object-cover h-[95px] w-[95px]"
               src={imgSrc2}
               alt={alt2}
             />
           </div>
-          <div className="py-8 grid place-content-center w-full place-content-center">
+          <div className="py-4 grid place-content-center w-full place-content-center">
             <SiGooglemessages className="fill-miliki-blue h-[33px] w-[33px]" />
           </div>
           <p className="mb-3 px-4 font-normal text-justify text-miliki-dark">
