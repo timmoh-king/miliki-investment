@@ -19,10 +19,18 @@ const MilikiFooter = ({ to }) => {
           <br />
           <br />
           <div className="flex flex-row items-center px-4">
-            <IoLogoFacebook className="rounded-full fill-miliki-blue m-1 h-[23px] w-[23px]" />
-            <IoLogoGithub className="rounded-full fill-miliki-blue m-1 h-[23px] w-[23px]" />
-            <IoLogoLinkedin className="rounded-full fill-miliki-blue m-1 h-[23px] w-[23px]" />
-            <IoLogoTwitter className="rounded-full fill-miliki-blue m-1 h-[23px] w-[23px]" />
+            <Link to={to}>
+              <IoLogoFacebook className="rounded-full fill-miliki-blue m-1 h-[23px] w-[23px]" />
+            </Link>
+            <Link to={to}>
+              <IoLogoGithub className="rounded-full fill-miliki-blue m-1 h-[23px] w-[23px]" />
+            </Link>
+            <Link to={to}>
+              <IoLogoLinkedin className="rounded-full fill-miliki-blue m-1 h-[23px] w-[23px]" />
+            </Link>
+            <Link to={to}>
+              <IoLogoTwitter className="rounded-full fill-miliki-blue m-1 h-[23px] w-[23px]" />
+            </Link>
           </div>
         </div>
         <div className="flex-start">
