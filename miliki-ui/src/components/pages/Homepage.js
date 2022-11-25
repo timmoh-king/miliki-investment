@@ -97,7 +97,7 @@ export const HeroSection = () => {
 export const ExploreSection = () => {
   return (
     <div className="bg-white items-center">
-      <div className="container grid grid-cols-2 mt-[50px] mb-[50px] mx-auto items-flex flex-row">
+      <div className="container grid grid-cols-1 md:grid-cols-2 mt-[50px] mb-[50px] mx-auto items-flex flex-row">
         <div className="mt-[50px]">
           <div className="flex flex-row py-4">
             <IconComponent
@@ -111,18 +111,18 @@ export const ExploreSection = () => {
             1500s, when an unknown printer took a galley of type and scrambled
             it to make a type specimen book. It has survived not only five
           </p>
-          <div className="flex flex-row gap-2 py-4">
+          <div className="flex flex-row gap-2 py-4 gap-8 md:gap-1">
             <MilikiButton
               to="/signup"
               isButtonForm={false}
               buttonText="Register"
-              buttonStyle="hover:ring-[1px] hover:ring-miliki-blue"
+              buttonStyle="w-[64px] md:w-[130px] hover:ring-[1px] hover:ring-miliki-blue text-sm md:text-md"
             />
             <MilikiButton
               to="/"
               isButtonForm={false}
               buttonText="Explore"
-              buttonStyle="bg-white mx-3 text-black ring-miliki-blue ring-[1px] h-[34px] hover:bg-miliki-blue hover:text-white hover:ring-[0px]"
+              buttonStyle="bg-white mx-3 text-black w-[64px] md:w-[130px] ring-miliki-blue ring-[1px] h-[34px] hover:bg-miliki-blue hover:text-white hover:ring-[0px] text-sm md:text-md"
             />
           </div>
         </div>
@@ -140,7 +140,7 @@ export const ExploreSection = () => {
 export const EventsFeatured = () => {
   return (
     <div className="bg-white items-center">
-      <div className="container grid grid-cols-2 mt-[50px] mb-[50px] mx-auto items-flex flex-row">
+      <div className="container grid grid-cols-1 md:grid-cols-2 mt-[50px] mb-[50px] mx-auto items-flex flex-row">
         <div className="mt-[50px]">
           <div className="flex flex-row py-4">
             <IconComponent
@@ -159,13 +159,13 @@ export const EventsFeatured = () => {
               to="/"
               isButtonForm={false}
               buttonText="Explore"
-              buttonStyle="bg-white mx-3 text-black ring-miliki-blue ring-[1px] h-[34px] hover:bg-miliki-blue hover:text-white hover:ring-[0px]"
+              buttonStyle="bg-white w-[64px] md:w-[130px] text-sm md:text-md text-black ring-miliki-blue ring-[1px] h-[34px] hover:bg-miliki-blue hover:text-white hover:ring-[0px]"
             />
           </div>
         </div>
         <div>
           <img
-            className="w-full rounded-md"
+            className="w-full rounded-md object-cover"
             src="israel-andrade-YI_9SivVt_s-unsplash.jpg"
             alt="Explore more about us"
           />
@@ -177,7 +177,7 @@ export const EventsFeatured = () => {
 export const OfferSection = ({to}) => {
   return (
     <div className="bg-miliki-gray items-center">
-      <div className="container grid grid-cols-2 mt-[50px] mb-[50px] mx-auto items-flex flex-row">
+      <div className="container grid grid-cols-1 mt-[50px] mb-[50px] mx-auto items-flex flex-row md:grid-cols-2">
         <div className="mt-[50px] mb-[50px]">
           <img
             className="w-full rounded-md"
@@ -270,7 +270,8 @@ export const FeaturedInvestors = () => {
           <IconComponent icon={<IoIosRocket className="fill-miliki-blue" />} />
           <TitleComponent titleDetails="Our Featured Investors" />
         </div>
-        <div className="flex flex-row mb-[50px]">
+        <div className="container grid grid-cols-1 flex flex-row mb-[50px] md:grid-cols-1">
+          <div>
           <p className="py-2 mr-5 text-start text-normal text-miliki-black">
             is simply dummy text of the printing and typesetting industry. Lorem
             Ipsum has when an unknown printer took a galley of type and
@@ -279,6 +280,7 @@ export const FeaturedInvestors = () => {
             when an unknown printer took a galley of type and scrambled it to
             make a type specimen book. It has survived not only five
           </p>
+          </div>
           <div className="mt-4">
             <MilikiButton to="/signin" isButtonForm={false} buttonText="Invest" />
           </div>
@@ -290,7 +292,7 @@ export const FeaturedInvestors = () => {
 export const InvestorCards = () => {
   return (
     <div className="flex flex-row grid place-content-center mb-[125px]">
-      <div className="container flex flex-row mx-auto">
+      <div className="container grid grid-cols-1 flex flex-row mx-auto md:grid-cols-3">
         <HomeCard
           isInvestor={true}
           imgSrc="etty-fidele-AzVexpHvuKY-unsplash.jpg"
@@ -339,7 +341,7 @@ export const InvestorTestimonials = () => {
             when an unknown printer took a galley of type and scrambled it to
             make a type specimen book. It has survived not only five
           </p></div>
-      <div className="container flex mx-auto mt-[75px] mb-[125px] place-content-center">
+      <div className="container grid grid-cols-1 flex mx-auto mt-[75px] mb-[125px] place-content-center md:grid-cols-3">
         <HomeCard
           isInvestor={false}
           imgSrc2="rui-silvestre-jCeVRUQslTs-unsplash.jpg"

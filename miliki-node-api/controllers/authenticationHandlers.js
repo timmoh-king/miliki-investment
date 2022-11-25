@@ -32,7 +32,7 @@ module.exports = {
         .status(400)
         .json({ errored: true, error: "Incorrect Password" });
 
-        console.log(validPassword)
+    console.log(validPassword);
 
     const response = pick(results, ["userid", "email"]);
 
@@ -52,7 +52,7 @@ module.exports = {
     );
   },
   signUpHandler: async (req, res) => {
-    const { firstname, lastname, email, contact, password } = req.body
+    const { firstname, lastname, email, contact, password } = req.body;
 
     const { error } = addAUserValidation(req.body);
 
@@ -62,12 +62,18 @@ module.exports = {
         .send({ errored: true, error: error.details[0].message });
 
     const results = await db.search("miliki.user", { email });
-    console.log(results)
 
     if (!isEmpty(results))
       return res
         .status(401)
         .json({ errored: true, error: "Account Already exists Login" });
+
+    const contactExist = await db.search("miliki.user", { contact });
+
+    if (!isEmpty(contactExist))
+      return res
+        .status(401)
+        .json({ errored: true, error: "contact entered already exists in another account" });
 
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(password, salt);
@@ -75,12 +81,9 @@ module.exports = {
     req.body["userid"] = uuid();
     req.body["password"] = hash;
 
-    const {confirmPassword, ...other} = req.body;
+    const { confirmPassword, ...other } = req.body;
 
-    const response = await db.create("miliki.user", other, [
-      "userid",
-      "email",
-    ]);
+    const response = await db.create("miliki.user", other, ["userid", "email"]);
 
     jwt.sign(
       { response },

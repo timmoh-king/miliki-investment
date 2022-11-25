@@ -115,8 +115,8 @@ const MilikiFooter = ({ to }) => {
           </ul>
         </div>
       </div>
-      <div className="h-[48px] bg-miliki-gray">
-        <div className="container mx-auto h-[26px] bg-miliki-gray md:flex md:items-center md:justify-between md:p-6">
+      <div className="h-[48px] bg-miliki-gray md:mx-auto">
+        <div className="container md:mx-auto mx-auto h-[26px] bg-miliki-gray md:flex md:items-center md:justify-between md:p-6">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2022
             <Link to={to} className="hover:underline">
